@@ -19,4 +19,9 @@ void	check_not_sorted(t_tab *t);
 void	create_tab1(char **argv, t_tab *t);
 void	create_tab2(int argc, char **argv, t_tab *t);
 
+//operations
+void	sa(t_tab *t);
+void	ra(t_tab *t);
+void	rra(t_tab *t);
+
 #endif
