@@ -12,8 +12,13 @@ if argc > 2
 we cannot fill an int array with 0 to check for doublons (like ft_union). instead, we should compare integers one by one :c\
 maybe: we could create an array of int the size of argc, filling it with 0. whenever we encounter an int, we give tab[argc] = int. then we check if tab[x]=int == tab[y]=int\
 
+TODO
+functions
+algo
 
-##CHECK IF CHECKIFSORTED WORKS!!!!!!!!!!!!!!!
 
+DONE
+data parsing and error management
+convert tab into a struct
 
 ##Algorithm:

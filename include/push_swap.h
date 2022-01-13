@@ -3,10 +3,20 @@
 
 # include "../libft/libft.h"
 # include <unistd.h>
+# include <stdlib.h>
 # include <stdio.h>
 
+//create tab and give index
+typedef struct s_tab
+{
+	int	*tab;
+	int	pos;
+}		t_tab;
+
+//error_management.c
 void	str_is_digit(char *s);
-//void	check_duplicate(int *tab, int i);
-void	check_not_sorted(int *tab, int len);
+void	check_not_sorted(t_tab *t);
+void	create_tab1(char **argv, t_tab *t);
+void	create_tab2(int argc, char **argv, t_tab *t);
 
 #endif
