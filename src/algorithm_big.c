@@ -6,7 +6,7 @@
 /*   By: rohoarau <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 14:57:48 by rohoarau          #+#    #+#             */
-/*   Updated: 2022/03/03 16:54:52 by rohoarau         ###   ########.fr       */
+/*   Updated: 2022/03/08 16:07:22 by rohoarau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	algorithm100(t_tab *t, int how_big)
 	{
 		if (t->pos % how_big * (x + 2) == 0 && x == how_big)
 			return (0);
-		if (push_block(t, border, x) == 1)
+		if (push_block(t, border, x, how_big) == 1)
 			return (0);
 		save_max = biggest_int(t->b, t->posb);
 		while (t->posb)
@@ -37,7 +37,7 @@ int	algorithm100(t_tab *t, int how_big)
 	return (0);
 }
 
-int	push_block(t_tab *t, int border, int x)
+int	push_block(t_tab *t, int border, int x, int loop)
 {
 	int	remember;
 
@@ -54,11 +54,12 @@ int	push_block(t_tab *t, int border, int x)
 			remember++;
 		}
 	}
-	while (remember && x != 0)
-	{
-		rra(t);
-		remember--;
-	}
+	if (x < loop / 2)
+		while (remember++ < t->pos)
+			ra(t);
+	else 
+		while (remember--)
+			rra(t);
 	return (0);
 }
 

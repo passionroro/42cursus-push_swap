@@ -6,7 +6,7 @@
 /*   By: rohoarau <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 17:20:27 by rohoarau          #+#    #+#             */
-/*   Updated: 2022/03/03 16:52:16 by rohoarau         ###   ########.fr       */
+/*   Updated: 2022/03/08 16:17:07 by rohoarau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int		algorithm3(t_tab *t);
 
 //algorithm_big.c
 int		algorithm100(t_tab *t, int how_many);
-int		push_block(t_tab *t, int border, int x);
+int		push_block(t_tab *t, int border, int x, int loop);
 int		push_last_block(t_tab *t, int border, int x);
 void	push_biggest(t_tab *t);
 void	push_smallest(t_tab *t);
